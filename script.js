@@ -26,6 +26,7 @@ const up4 = document.getElementById('up4')
 const up5 = document.getElementById('up5')
 const up6 = document.getElementById('up6')
 const up7 = document.getElementById('up7')
+const up8 = document.getElementById("up8")
 
 up1.addEventListener('click', () => {
     if (pontos >= 50) {
@@ -77,7 +78,17 @@ up7.addEventListener('click', () => {
     }
 })
 
+up8.addEventListener('click', () => {
+    if (pontos >= 250000000) {
+        pontos -= 250000000
+        adiciona_texto()
+        ValorPorClique += 1000000
+    }
+})
+
+
 
 
 adicionar()
+
 
