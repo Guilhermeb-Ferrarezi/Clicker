@@ -80,3 +80,4 @@ up7.addEventListener('click', () => {
 
 
 adicionar()
+
