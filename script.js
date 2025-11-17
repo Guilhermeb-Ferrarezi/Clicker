@@ -73,9 +73,10 @@ up7.addEventListener('click', () => {
     if (pontos >= 5000000) {
         pontos -= 5000000
         adiciona_texto()
-        ValorPorClique += 100000
+        ValorPorClique += 250000
     }
 })
+
 
 
 adicionar()
