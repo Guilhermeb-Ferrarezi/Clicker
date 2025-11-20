@@ -8,7 +8,6 @@ header {
     background-color: black;
     color: white;
 }
-
 body {
     font-family: 'Tomorrow', sans-serif1;
     background-color: rgb(214, 214, 214);
@@ -99,18 +98,34 @@ button {
     font-size: 20px;
 }
 
+.Upgrades button:active{
+    animation: anima-botao 1s ease-out;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes anima-botao {
+    0%{
+        transform: translatey(10px);
+    }  
+    100% {  
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+
 .Upgrades {
-    align-items: left;
     margin: 15px;
     max-width: 15.625rem;
     background-color: purple;
     position: relative;
     border: 2px solid transparent;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     text-align: center;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: 46.875rem;
+    max-height: 45rem;
 }
 
 .Upgrades h1 {
@@ -172,3 +187,12 @@ button {
     font-size: 25px;
 }
 
+.autoclicker{
+    color: red;
+}
+
+#gsac{
+    font-size: 15px;
+    font-weight: 700;
+    max-width: 200px;
+}
