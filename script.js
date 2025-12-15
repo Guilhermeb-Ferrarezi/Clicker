@@ -80,24 +80,24 @@ function formatarNumero(n) {
 }
 
 
-function iniciarCliqueAutomatico(){
+function iniciarCliqueAutomatico() {
     if (intervaloCliqueAutomatico !== null) return
     intervaloCliqueAutomatico = setInterval(handleClick, velocidadeAuto)
 }
 
-function pararCliqueAutomatico(){
+function pararCliqueAutomatico() {
     clearInterval(intervaloCliqueAutomatico)
     intervaloCliqueAutomatico = null
 }
 
-document.addEventListener('keydown', (event) =>{
+document.addEventListener('keydown', (event) => {
     if (event.code === 'Space' && !teclaEspacoPressionada) {
         teclaEspacoPressionada = true
-        if (upauto > 0) iniciarCliqueAutomatico() 
+        if (upauto > 0) iniciarCliqueAutomatico()
     }
 })
 document.addEventListener('keyup', (event) => {
-    if (event.code === 'Space'){
+    if (event.code === 'Space') {
         teclaEspacoPressionada = false;
         pararCliqueAutomatico()
     }
@@ -105,7 +105,7 @@ document.addEventListener('keyup', (event) => {
 
 
 autoclicker.addEventListener('click', () => {
-    if (pontos >= 1000000 && upauto === 0){
+    if (pontos >= 1000000 && upauto === 0) {
         pontos -= 1000000
         adiciona_texto()
         autoclicker.textContent = '500m pontos'
@@ -114,15 +114,22 @@ autoclicker.addEventListener('click', () => {
         return
     }
 
-    if (pontos >= 500000000 && upauto === 1){
-        pontos -= 500000000
+    if (pontos >= 500000000 && upauto === 1) {
+        pontos >= 500000000
         adiciona_texto()
         velocidadeAuto = 25
+        autoclicker.textContent = '500m pontos'
+        upauto++
+        return
+    }
+    if (pontos >= 1000000000000 && upauto === 2) {
+        pontos -= 1000000000000
+        adiciona_texto()
+        velocidadeAuto = 10
         autoclicker.textContent = 'Max'
         upauto++
         return
     }
 })
-
 adicionar();
 adiciona_texto();
